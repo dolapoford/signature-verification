@@ -1,0 +1,77 @@
+<div class="card">
+    <div pAnimate enterClass="flip" leaveClass="fadein "(click)="showDialog()"
+        class="flex   animation-duration-1000 animation-ease-out m-5">
+        <p-button label="Open" styleClass="p-button-outlined p-button-success"></p-button>
+    </div>
+    <p-table [value]="products" [(selection)]="selectedProducts" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 4rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th>Created Time</th>
+                <th>Priority</th>
+                <th>Source BU</th>
+                <th>Reference</th>
+                <th>DCP Reference</th>
+                <th>Account Name</th>
+                <th>Tran CCY</th>
+                <th>Tran Amt</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                </td>
+                <td>{{product.code}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.code}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
+<!-- <div class="card flex flex-wrap flex-column align-items-center gap-2">
+    <p-toast></p-toast>
+    <p-confirmDialog [style]="{ width: '50vw' }" key="positionDialog" [position]="position" rejectButtonStyleClass="p-button-outlined"></p-confirmDialog>
+    <div class="flex flex-wrap justify-content-center gap-2">
+        <p-button (click)="confirmPosition('left')" icon="pi pi-arrow-right" label="Left" styleClass="p-button-help"></p-button>
+        <p-button (click)="confirmPosition('right')" icon="pi pi-arrow-left" label="Right" styleClass="p-button-help"></p-button>
+    </div>
+</div> -->
+
+
+<!-- <div class="card flex flex-wrap flex-column align-items-center gap-2">
+    <p-toast></p-toast>
+    <p-confirmDialog [style]="{ width: '50vw' }" key="positionDialog" [position]="position"
+        rejectButtonStyleClass="p-button-outlined">
+    love
+    </p-confirmDialog>
+    <div class="flex flex-wrap justify-content-center gap-2">
+        <p-button (click)="confirmPosition('left')" icon="pi pi-arrow-right" label="Left"
+            styleClass="p-button-help"></p-button>
+        <p-button (click)="confirmPosition('right')" icon="pi pi-arrow-left" label="Right"
+            styleClass="p-button-help"></p-button>
+
+
+           
+    </div>
+
+</div> -->
+
+
+<div class="card flex justify-content-center">
+    
+    <p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        <p class="m-0">
+          
+        </p>
+    </p-dialog>
+</div>

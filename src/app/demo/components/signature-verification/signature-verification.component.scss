@@ -1,0 +1,91 @@
+.box{
+    width: 100%;
+    height:100%;
+    box-shadow: 0 24px 64px #26214a1a;
+    border-radius: 12px;
+}
+.header{
+    color: #fff;
+    background-color: #3EC336;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px 12px 0px 0px;
+}
+.content{
+    padding: 15px 20px;
+}
+.text-full{
+    width: 100%;
+}
+.textarea-full{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+}
+.reference{
+    margin-top:5px;
+}
+.inputReference{
+    width:100%;
+
+}
+
+#firstname{
+   
+    height: 30px;
+    width: 100%;
+}
+
+#payment-deatails1{
+
+    height: 30px;
+    width: 100%;
+}
+
+#payment-deatails2{
+
+    height: 30px;
+    width: 100%;
+}
+#payment-deatails3{
+
+    height: 30px;
+    width: 100%;
+}
+.payment-input{
+   
+    width: 100%;
+}
+.payment-input input{
+    width: 100%;
+    
+}
+
+.legend-one{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    font-family: var( --font-family);
+    letter-spacing: 2px;
+}
+fieldset{
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.discrepancy{
+    width: 100%;
+}
+
+#discrepancy-drop{
+    width: 100%;
+}
+// .commentArea{
+   
+// }

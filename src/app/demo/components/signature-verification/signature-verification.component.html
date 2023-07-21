@@ -1,0 +1,119 @@
+<div class="grid m-5">
+    <div class="col-12 flex flex-row gap-2">
+        <p-button  label="Proceed" ></p-button>
+        <p-button  label="Reject" styleClass="p-button-danger"></p-button>
+    </div>
+    <div class="col-12 md:col-5">
+        <div class="box">
+            <article class="header">Signature Verification</article>
+            <div class="content">
+
+                <form action="">
+                    <div class="mb-3 w-full text-full">
+                        <h6 class="font-bold commentArea">Comment History</h6>
+                        <textarea rows="5" cols="30" class="textarea-full"></textarea>
+                    </div>
+                    <div class="mb-5">
+                        <!-- <p-fieldset legend="Document" class="mb-3">
+                        <div class="flex gap-2">
+                            <label for="" class="reference">Reference:</label>
+                           
+                            <input pInputText id="firstname"/>
+                        </div>
+                    </p-fieldset> -->
+
+                        <fieldset>
+                            <legend class="legend-one">Document</legend>
+                            <input pInputText id="firstname" placeholder="Reference" />
+                        </fieldset>
+                    </div>
+
+
+                    <div class="mt-8">
+                        <fieldset>
+                            <legend class="legend-one">Transfer Details</legend>
+                            <div class="grid">
+                                <div class="col-6  flex">
+
+                                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Currency"
+                                        [editable]="true" optionLabel="name"></p-dropdown>
+                                </div>
+                                <div class="col-6 flex flex-column gap-2">
+                                    <input pInputText id="firstname" placeholder="Amount" />
+                                    <input pInputText id="firstname" placeholder="MUR equivalent" />
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend class="legend-one">Debit Account Details</legend>
+
+                            <div class="flex flex-column gap-2">
+                                <input type="text" pInputText placeholder="Account No" />
+                                <input type="text" pInputText placeholder="Name" />
+                                <input type="text" pInputText placeholder="Currency" />
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="legend-one">Payment Details</legend>
+                            <div class="flex gap-2">
+                                <p class=""> Payment Details </p>
+                                <div class="payment-input flex flex-column gap-2">
+                                    <input type="text" pInputText id="payment-deatails1" />
+                                    <input type="text" pInputText id="payment-deatails2" />
+                                    <input type="text" pInputText id="payment-deatails3" />
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class=" flex justify-content-center">
+                            <p-overlayPanel #op>
+                                <img src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg"
+                                    alt="product" />
+                            </p-overlayPanel>
+                            <p-button (click)="op.toggle($event)" label="View Signature"></p-button>
+                        </div>
+
+
+                        <fieldset>
+                            <legend class="legend-one">Signature</legend>
+
+                            <div class="flex flex-wrap gap-3">
+                            <p style="margin-top: 12px;">Signature OK</p>
+                        
+                                    <div class="flex align-items-center">
+                                        <p-radioButton name="pizza" value="Cheese" [(ngModel)]="option"
+                                            inputId="ingredient1"></p-radioButton>
+                                        <label for="ingredient1" class="ml-2">YES</label>
+                                    </div>
+
+                                    <div class="flex align-items-center">
+                                        <p-radioButton name="pizza" value="Mushroom" [(ngModel)]="option"
+                                            inputId="ingredient2"></p-radioButton>
+                                        <label for="ingredient2" class="ml-2">NO</label>
+                                    </div>
+
+                            </div>
+
+                            <div class="discrepancy">
+                                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Discrepancy Reason"
+                                [editable]="true" optionLabel="name" id="discrepancy-drop" ></p-dropdown>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 md:col-7">
+        <div class="text-center p-3 border-round-sm bg-primary font-bold">6</div>
+    </div>
+
+</div>
